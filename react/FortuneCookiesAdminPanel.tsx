@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { Layout, PageBlock, PageHeader } from 'vtex.styleguide'
 
-import UsersTable from './UsersTable'
+import CookiesPanel from './CookiesPanel'
 
 import './styles.global.css'
 
@@ -16,7 +16,7 @@ const AdminExample: FC = () => {
       }
     >
       <PageBlock variation="full">
-        <UsersTable />
+        <CookiesPanel />
       </PageBlock>
     </Layout>
   )
