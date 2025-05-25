@@ -71,3 +71,6 @@ If you renamed the field/entity, edit ```/react/services/mdApi.ts```.
 - **UI**: VTEX Styleguide Table + Form
 - **Messages** in /react/messages/{locale}.json
 
+## Improvements
+
+⚠️ ***Currently the app is leaving access keys exposed, for future development it will be necessary to modify the development to handle request authentication in a more secure way.***
