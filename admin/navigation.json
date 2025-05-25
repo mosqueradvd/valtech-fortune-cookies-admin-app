@@ -1,6 +1,5 @@
 {
-  "section": "marketplace",
-  "subSection": "Apps instaladas",
-  "titleId": "admin/fortunes-cookies.title",
+  "section": "orders",
+  "titleId": "admin/fortune-cookies.title",
   "path": "/admin/fortune-cookies"
 }

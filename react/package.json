@@ -1,6 +1,6 @@
 {
-  "name": "vtex.admin-example",
-  "version": "0.0.12",
+  "name": "fortune-cookies",
+  "version": "0.0.1",
   "devDependencies": {
     "@types/node": "^11.12.1",
     "@types/react": "^16.8.10",
@@ -15,7 +15,8 @@
     "typescript": "3.9.7"
   },
   "dependencies": {
-    "@types/faker": "^4.1.5",
-    "faker": "^4.1.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-intl": "^5.25.1"
   }
 }

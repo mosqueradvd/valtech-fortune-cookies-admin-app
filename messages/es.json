@@ -1,4 +1,9 @@
 {
-  "admin/fortunes-cookies.title": "Galletas de la fortuna",
-  "admin-example.hello-world": "Hola Mundo"
+  "admin/fortune-cookies.title": "Galletas de la fortuna",
+  "admin/fortune-cookies.phrase-column": "Frase",
+  "admin/fortune-cookies.actions-column": "Acciones",
+  "admin/fortune-cookies.new-phrase-placeholder": "Nueva frase",
+  "admin/fortune-cookies.create-button": "Crear",
+  "admin/fortune-cookies.empty-state-label": "Aún no hay frases",
+  "admin/fortune-cookies.empty-state-message": "Usa el campo de arriba para crear la primera 🍪"
 }
