@@ -69,7 +69,7 @@ If you renamed the field/entity, edit ```/react/services/mdApi.ts```.
 
 - **Hooks**: useFortuneCookies (REST)
 - **UI**: VTEX Styleguide Table
-- **Messages** in /react/messages/{locale}.json
+- **Messages** in ```/react/messages/{locale}.json```
 
 ## Improvements
 
