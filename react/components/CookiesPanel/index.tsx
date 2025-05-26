@@ -11,12 +11,15 @@ import { useIntl } from 'react-intl'
 import { useFortuneCookies } from '../../hooks/useFortuneCookies'
 import { FortuneCookie } from '../../typings/FortuneCookie'
 
+const ITEMS_PER_PAGE = 10
+
 const CookiesPanel: React.FC = () => {
   const { data, loading, error, add, del } = useFortuneCookies()
   const [text, setText] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
+  const [itemsPerPage] = useState(ITEMS_PER_PAGE)
   const intl = useIntl()
 
-  /* ----- table columns ----- */
   const schema = {
     properties: {
       text: {
@@ -45,13 +48,17 @@ const CookiesPanel: React.FC = () => {
     },
   } as const
 
+  const tableLength = data?.length || 0
+  const from = (currentPage - 1) * itemsPerPage
+  const to = Math.min(currentPage * itemsPerPage, tableLength)
+  const currentItems = data?.slice(from, to) || []
+
   if (loading) return <Spinner />
 
   return (
     <>
       {error && <div className="c-danger mb4">{error}</div>}
 
-      {/* ----- new cookies creation form ----- */}
       <div className="mb5 flex items-center">
         <Input
           value={text}
@@ -73,12 +80,20 @@ const CookiesPanel: React.FC = () => {
         </div>
       </div>
 
-      {/* ----- VTEX Style Guide Table ----- */}
       <Table
         fullWidth
-        items={data}
+        items={currentItems}
         schema={schema}
         density="low"
+        pagination={{
+          currentItemFrom: from + 1,
+          currentItemTo: to,
+          onNextClick: () => setCurrentPage(prev => prev + 1),
+          onPrevClick: () => setCurrentPage(prev => prev - 1),
+          textShowRows: intl.formatMessage({ id: 'admin/fortune-cookies.show-rows' }),
+          textOf: intl.formatMessage({ id: 'admin/fortune-cookies.of' }),
+          totalItems: tableLength,
+        }}
         emptyStateLabel={intl.formatMessage({ id: 'admin/fortune-cookies.empty-state-label' })}
         emptyStateChildren={
           <span className="c-muted-1">

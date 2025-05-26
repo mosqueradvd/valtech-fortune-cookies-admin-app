@@ -5,5 +5,7 @@
   "admin/fortune-cookies.new-phrase-placeholder": "Nueva frase",
   "admin/fortune-cookies.create-button": "Crear",
   "admin/fortune-cookies.empty-state-label": "Aún no hay frases",
-  "admin/fortune-cookies.empty-state-message": "Usa el campo de arriba para crear la primera 🍪"
+  "admin/fortune-cookies.empty-state-message": "Usa el campo de arriba para crear la primera 🍪",
+  "admin/fortune-cookies.show-rows": "Mostrar filas",
+  "admin/fortune-cookies.of": "de"
 }

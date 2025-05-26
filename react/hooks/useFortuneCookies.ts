@@ -22,8 +22,19 @@ export function useFortuneCookies() {
 
     useEffect(() => { refresh() }, [refresh])
 
-    const add = async (txt: string) => { await MD.addFortuneNewFortuneCookie(txt); await refresh() }
-    const del = async (id: string) => { await MD.deleteFortuneCookie(id); await refresh() }
+    const delay = (ms: number) => new Promise(r => setTimeout(r, ms))
+
+    const add = async (txt: string) => {
+        await MD.addFortuneNewFortuneCookie(txt)
+        await delay(800)
+        await refresh()
+    }
+
+    const del = async (id: string) => {
+        await MD.deleteFortuneCookie(id)
+        await delay(800)
+        await refresh()
+    }
 
     return { data, loading, error, add, del, refresh }
 }

@@ -18,7 +18,7 @@ const commonHeaders = {
 import { FortuneCookie } from '../typings/FortuneCookie'
 
 export async function listFortuneCookies(): Promise<FortuneCookie[]> {
-    const url = `${base}/search?_fields=id,CookieFortune&_schema=public`
+    const url = `${base}/search?_fields=id,CookieFortune&_schema=public&_t=${Date.now()}`
     const res = await fetch(url, {
         method: 'GET',
         headers: { ...commonHeaders, 'REST-Range': 'resources=0-400' },
