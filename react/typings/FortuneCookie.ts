@@ -1,0 +1,1 @@
+export interface FortuneCookie { id: string; text: string }

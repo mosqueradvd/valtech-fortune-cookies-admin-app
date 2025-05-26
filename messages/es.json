@@ -1,9 +1,11 @@
 {
-  "admin-example.navigation.label-group": "Admins de ejemplo",
-  "admin-example.navigation.label-table": "Ejemplo de tabela",
-  "admin-example.navigation.search.kws": "teste, mock, fake",
-  "admin-example.navigation.details.search.kws": "detalhe, mock, test, oi",
-  "admin-example.navigation.table.search.kws": "tabela, mock, test, tchau",
-  "admin-example.hello-world": "Admin de ejemplo",
-  "admin-example.details": "Página de detalles"
+  "admin/fortune-cookies.title": "Galletas de la fortuna",
+  "admin/fortune-cookies.phrase-column": "Frase",
+  "admin/fortune-cookies.actions-column": "Acciones",
+  "admin/fortune-cookies.new-phrase-placeholder": "Nueva frase",
+  "admin/fortune-cookies.create-button": "Crear",
+  "admin/fortune-cookies.empty-state-label": "Aún no hay frases",
+  "admin/fortune-cookies.empty-state-message": "Usa el campo de arriba para crear la primera 🍪",
+  "admin/fortune-cookies.show-rows": "Mostrar filas",
+  "admin/fortune-cookies.of": "de"
 }
